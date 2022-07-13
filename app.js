@@ -20,8 +20,11 @@ app.get('/contact', (req, res) => {
 
 //Url dengan mengambil parameter id dan query category
 app.get('/product/:id', (req, res) => {
-    res.send('product id : ' + req.params.id + '<br></br>'
-    + 'category id : ' + req.query.category)
+    res.send(`product id : ${req.params.id} <br>
+            category id : ${req.query.category} <br>
+            <a href="/">home</a>
+            <a href="/contact">contact</a>
+            <a href="/about">about</a>`) //category ini sebagai variable yang akan diberikan di url
 })
 
 //Jika url dimasukkan selain routes list yang tersedia
