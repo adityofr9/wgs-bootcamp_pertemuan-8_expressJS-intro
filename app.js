@@ -18,10 +18,10 @@ app.get('/contact', (req, res) => {
     res.sendFile('./contact.html', {root: __dirname})
 })
 
-//Url dengan mengambil parameter id
-app.get('/product/:id/category/:idCat', (req, res) => {
+//Url dengan mengambil parameter id dan query category
+app.get('/product/:id', (req, res) => {
     res.send('product id : ' + req.params.id + '<br></br>'
-    + 'category id : ' + req.params.idCat)
+    + 'category id : ' + req.query.category)
 })
 
 //Jika url dimasukkan selain routes list yang tersedia
