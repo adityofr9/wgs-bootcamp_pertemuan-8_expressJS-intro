@@ -19,9 +19,9 @@ app.get('/contact', (req, res) => {
 })
 
 //Url dengan mengambil parameter id
-app.get('/product/:id', (req, res) => {
-    res.send('product id :' + req.params.id)
-    // res.sendFile('./contact.html', {root: __dirname})
+app.get('/product/:id/category/:idCat', (req, res) => {
+    res.send('product id : ' + req.params.id + '<br></br>'
+    + 'category id : ' + req.params.idCat)
 })
 
 //Jika url dimasukkan selain routes list yang tersedia
