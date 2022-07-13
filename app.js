@@ -18,6 +18,12 @@ app.get('/contact', (req, res) => {
     res.sendFile('./contact.html', {root: __dirname})
 })
 
+//Url dengan mengambil parameter id
+app.get('/product/:id', (req, res) => {
+    res.send('product id :' + req.params.id)
+    // res.sendFile('./contact.html', {root: __dirname})
+})
+
 //Jika url dimasukkan selain routes list yang tersedia
 app.use('/', (req,res) => {
     res.status(404)
